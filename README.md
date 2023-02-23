@@ -8,16 +8,30 @@
 git clone
 ```
 
+### remove the .git folder
+
+```bash
+rm -rf .git
+```
+
 ### install the dependencies
 
 ```bash
-pnpm install
+$ pnpm install
+$ npm install
+```
+
+### if you don't have pnpm install it
+
+```bash
+npm install pnpm
 ```
 
 ### run the project
 
 ```bash
-pnpm dev
+$ pnpm run dev
+$ npm run dev
 ```
 
 # CREATE A NEW PROJECT WITH VUE + VITE + TAILWINDCSS
@@ -81,8 +95,10 @@ import './style.css';
 ### install vue-router
 
 ```bash
-pnpm add vue-router@latest
+pnpm install vue-router@latest
+npm install vue-router@latest
 ```
+
 https://router.vuejs.org/installation.html
 
 ### in the file main.ts add the following
@@ -99,7 +115,6 @@ const app = createApp(App);
 app.use(router);
 app.mount('#app');
 ```
-
 
 ### create a folder called modules
 
@@ -166,10 +181,7 @@ app.mount('#app');
   <h1>Page introuvable</h1>
 </template>
 
-<route lang="yaml">
-meta:
-  layout: 404
-</route>
+<route lang="yaml"> meta: layout: 404 </route>
 ```
 
 <hr />
@@ -178,6 +190,7 @@ meta:
 
 ```bash
 pnpm add vite-plugin-pages
+npm add vite-plugin-pages
 ```
 
 https://github.com/hannoeru/vite-plugin-pages
@@ -186,6 +199,7 @@ https://github.com/hannoeru/vite-plugin-pages
 
 ```bash
 pnpm add vite-plugin-vue-layouts
+npm add vite-plugin-vue-layouts
 ```
 
 https://github.com/johncampionjr/vite-plugin-vue-layouts
@@ -250,6 +264,7 @@ export default router;
 
 ```bash
 pnpm run dev
+npm run dev
 ```
 
 #### and go to http://localhost:PORT
